@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "project-archive-tool"
+version = "0.1.0"
+description = ""
+authors = ["Dylan Harness <dharness.engineer@gmail.com>"]
+readme = "README.md"
+packages = [{include = "project_archive_tool"}]
+
+[tool.poetry.scripts]
+pat = "project_archive_tool.__init__:main"
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+boto3 = "^1.24.79"
+PyYAML = "^6.0"
+Send2Trash = "^1.8.0"
+tqdm = "^4.64.1"
+
+
+[tool.poetry.group.dev.dependencies]
+yapf = "^0.32.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
